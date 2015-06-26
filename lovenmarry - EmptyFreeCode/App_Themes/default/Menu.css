@@ -1,0 +1,331 @@
+﻿body 
+{
+	/*background:#E7E7DC;*/
+}
+
+.menuBar
+{
+	background-color: #CB3545;
+}
+.menuBar-inner
+{
+	margin : 0px auto; 
+	width:970px;
+}
+
+
+
+.cssmenu ul, .cssmenu li, .cssmenu span, .cssmenu a
+{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.cssmenu
+{
+	/*float: right;*/
+	
+}
+.cssmenu:after, .cssmenu ul:after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+.cssmenu
+{
+	
+}
+.cssmenu a
+{
+	
+	
+	display: inline-block;
+	
+	
+	
+	padding:  12px;
+	text-decoration: none;
+	color: #fff;
+	
+	/*
+color: #996633;
+border-right-color: rgb(204, 153, 0);
+	border-right-style: solid;
+	border-right-width: 1px;*/
+}
+#LoginView a
+{
+	display: inline-block;
+	
+	padding: 0 16px;
+	text-decoration: none;
+	color: #fff;
+}
+.myLogo
+{
+	background-position: left center;
+	margin-left: 10px;
+	background-image: url('../../images/bharatLogo.png');
+	height: 80px;
+	background-repeat: no-repeat;
+	display: block;
+width: 300px;
+float :left ;
+}
+.ad {
+display: block;
+ font-size :10px;
+
+height: 20px;
+width: 100px;
+float :right ;
+position: absolute;
+right: 30px;
+top: 0px;
+z-index: 1;
+}
+    .loginMenu-inner
+{
+	position:relative;
+}
+.topmenu
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0px 7px;
+	background-color: #FABF06;
+	float: right;
+}
+.topmenu a
+{
+	color:#000000;
+}
+.topmenu a:hover
+{
+	color:#000000;
+}
+#menu
+{
+	
+	padding: 0;
+margin: 0;
+position: relative;
+float: right;
+list-style: none;
+/*background: #fff;*/
+font-family: 'Open Sans', sans-serif;
+}
+ul.menu {
+float: right;
+}
+#menu li {
+	float:left;
+	display:block;
+	text-align:center;
+	position:relative;
+	
+	margin-right:30px;
+	
+
+	border:none;
+}
+
+#menu li:hover
+{
+	
+}
+.cssmenu > li:hover > a, .cssmenu > li.active > a {
+color: #727272;
+}
+#menu li a {
+	
+padding: 12px 12px;
+font-family: 'Open Sans', sans-serif;
+font-size: 13px;
+color: #fff;
+text-decoration: none;
+display: inline-block;
+text-transform: uppercase;
+}
+
+#menu li:hover a {
+	
+	color: #727272;
+	background-color: #FFFFFF;
+}
+#menu li .drop {
+	
+	
+}
+#menu li:hover .drop {
+	
+}
+
+.dropdown_1column, 
+.dropdown_2columns, 
+.dropdown_3columns, 
+.dropdown_4columns,
+.dropdown_5columns {
+	
+	float:left;
+	position:absolute;
+	left:-999em; /* Hides the drop down */
+	text-align:left;
+	padding:10px 5px 10px 5px;
+	
+	border-top:none;
+	
+	
+}
+
+.dropdown_1column
+{
+	width: 200px;
+	padding: 10px 10px 2px 10px;
+	border: 1px solid #FFE9A4;
+	z-index: 5;
+	background: rgb(255, 255, 255);
+}
+.dropdown_2columns {width: 280px;}
+.dropdown_3columns
+{
+	
+	width: 470px;
+	padding: 10px 10px 2px 10px;
+	border: 1px solid #FFE9A4;
+	z-index: 5;
+	background: rgba(255, 255, 255, 0.86);
+	
+}
+.dropdown_4columns {width: 560px;}
+.dropdown_5columns {width: 700px;}
+
+#menu li:hover .dropdown_1column, #menu li:hover .dropdown_2columns, #menu li:hover .dropdown_3columns, #menu li:hover .dropdown_4columns, #menu li:hover .dropdown_5columns
+{
+	left: -1px;
+	top: auto;
+	color: #727272;
+}
+
+.col_1,
+.col_2,
+.col_3,
+.col_4,
+.col_5 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.col_1 {width:145px; background: #FFF;}
+.col_2 {width:270px;}
+.col_3 {width:410px;}
+.col_4 {width:550px;}
+.col_5 {width:690px;}
+
+#menu li ul li a
+{
+	padding:0;
+	margin:0;
+}
+
+#menu .menu_right {
+	float:left;
+	margin-right:0px;
+}
+ .menu_left a
+{
+font-size: 11px;
+padding: 12px 9px;
+border-right: 1px solid rgba(177, 13, 13, 1);
+}
+#menu li .align_right {
+	/* Rounded Corners */
+	
+}
+
+#menu li:hover .align_right {
+	left:auto;
+	right:-1px;
+	top:auto;
+	background: white;
+}
+#menu li:hover .align_left {
+	left:-1px;
+	right:auto;
+	top:auto;
+	background: white;
+}
+
+#menu p, #menu h2, #menu h3, #menu ul li {
+	
+	
+	
+	text-align:left;
+	
+}
+#menu h2 {
+	font-size:21px;
+	font-weight:400;
+	letter-spacing:-1px;
+	margin:7px 0 14px 0;
+	padding-bottom:14px;
+	border-bottom:1px solid #666666;
+}
+#menu h3 {
+	font-size:14px;
+	margin:7px 0 14px 0;
+	padding-bottom:7px;
+	border-bottom:1px solid #888888;
+}
+#menu p {
+	line-height:18px;
+	margin:0 0 10px 0;
+}
+
+#menu li:hover div a
+{
+	font-size: 12px;
+	color: #727272;
+}
+#menu li:hover div a:hover
+{
+	color: #727272;
+}
+
+
+.strong {
+	font-weight:bold;
+}
+.italic {
+	font-style:italic;
+}
+
+
+
+
+#menu li ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 12px 0;
+}
+#menu li ul li {
+	font-size:12px;
+	line-height:24px;
+	position:relative;
+	
+	padding:0;
+	margin:0;
+	float:none;
+	text-align:left;
+	width:130px;
+}
+#menu li ul li:hover {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}

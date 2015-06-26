@@ -1,0 +1,98 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="Partner_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+    <div id="fbimage" runat="server">
+    <link rel="image_src" href="feedimage" title="fname"  /> 
+    </div>
+    <asp:ContentPlaceHolder runat="server" ID="headContent">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <center>
+        <div id="websiteheader">
+            <table>
+                <tr>
+                    <td width='980px' align="left">
+                        <font size='5' color="white"><asp:Literal runat="server" ID="literalTitle" Text="yoursite.com"/></font><br />
+                        <font size='2'><asp:Literal runat="server" ID="literalPunchLine" Text="Arrange Your Own Love Marriage"/></font>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    <div id="nav_header">
+        <ul>
+            <li>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/members/Default.aspx">Main Menu</asp:HyperLink>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Partner/Default.aspx">Partner Program</asp:HyperLink>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Poll/Default.aspx">Vote</asp:HyperLink>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Forums/Default.aspx">Love Advisors</asp:HyperLink>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Quotes/Default.aspx">Love Quotes</asp:HyperLink>
+            </li>
+            <li runat="server" id="modmenu">
+                <asp:HyperLink ID="Hyplinkmod" runat="server" NavigateUrl="~/moderators/Default.aspx">Moderators</asp:HyperLink>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/contactus.aspx">Contact US</asp:HyperLink>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div id="color_bar">
+            <div id="nav_login">
+             <asp:LoginName ID="MemberName" runat="server" />   <asp:LoginStatus ID="MemberLoginStatus" runat="server" />
+            </div>
+        </div>
+        
+    </div>
+     <center>
+    <div runat="server" id="div_Ad1">
+    <img src="http://placehold.it/728X90/D3CDBB/fff/&text=Ads 728X90" />
+
+</div></center>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <div id="Div1" align="center">
+        <br />
+        <br />
+    </div>
+    <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" ShowStartingNode="False" />
+            <br />
+    <br />
+   <center> 
+    <div runat="server" id="div_Ad2">
+    <img src="http://placehold.it/728X90/D3CDBB/fff/&text=Ads 728X90" />
+</div>
+</center>
+    
+    &copy; Copyright © 2015 <a href="http://www.amincode.com/">amincode.com</a> All rights reserved.
+    </div>
+    </form>
+    <%  If Request.Cookies("scammer") IsNot Nothing Then
+         Response.Redirect("usedbyscammers.aspx")
+     End If
+    %>
+
+</body>
+</html>

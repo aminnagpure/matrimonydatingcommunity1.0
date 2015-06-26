@@ -1,0 +1,1 @@
+Update [Profile] set photopassw=isnull((Select Distinct passw from photo Where photo.pid=[Profile].pid),'')

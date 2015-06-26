@@ -1,0 +1,42 @@
+﻿
+TH
+{
+	font-size: 22px;
+	background-color: #ADD8E6;
+	font-family: #ffffff;
+	vertical-align: top;
+	text-align: center;
+}
+
+.splfordata
+{
+	/*font-size: 16px;*/
+	background-color: #eff3fb;
+	vertical-align: top;
+	text-align: left;
+}	
+
+
+.wrap {
+width: 10%;
+background: #F00;
+word-wrap: break-word;
+white-space: -moz-pre-wrap;
+wbr:after { content: "\00200B" }
+
+  /*IE fix*/
+/*Looking for Firefox fix*/
+
+
+.wordwrap
+{
+   word-wrap:break-word;
+   word-break:break-all;
+   width:800px;   
+  
+   
+   
+}
+
+
+	

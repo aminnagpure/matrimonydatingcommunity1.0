@@ -1,0 +1,76 @@
+﻿
+/*TH
+{
+	font-size: 22px;
+	background-color: #ADD8E6;
+	font-family: #ffffff;
+	vertical-align: top;
+	text-align: center;
+}*/
+
+
+
+.wrap {
+width: 10%;
+background: #F00;
+word-wrap: break-word;
+white-space: -moz-pre-wrap;
+wbr:after { content: "\00200B" }
+
+  /*IE fix*/
+/*Looking for Firefox fix*/
+
+
+.wordwrap
+{
+   word-wrap:break-word;
+   word-break:break-all;
+   width:800px;   
+  
+   
+   
+}
+
+.grid
+{
+	padding: 3px;
+	background-color: #F5F4EF;
+	border: 1px solid #C2BCA0;
+	font-size: smaller;
+}
+.gridHeader
+{
+	background-color: #B6AD87;
+	color: #FFFFFF;
+	font-size: medium;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.gridRow
+{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #C4B882;
+}
+.gridAlternetRow
+{
+	background-color: #D1CCB6;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #C4B882;
+}
+.gridFooter
+{
+	background-color: #B6AD87;
+	color: #FFFFFF;
+	font-size: medium;
+	font-weight: bold;
+	text-transform: uppercase;
+	}
+.gridpager
+{
+	background-color: #EAE8DE;
+}
+
+
+	

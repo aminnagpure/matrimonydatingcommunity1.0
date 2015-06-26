@@ -1,0 +1,97 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="moderators_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper_boxed">
+
+<div class="site_wrapper">
+<div id="trueHeader">
+    <div class="wrapper">
+      <div class="container"> 
+      
+        <!-- Logo -->
+        <div class="one_half"><a href="Default.aspx"  id="logo">
+        
+        </a></div>
+        
+         </div>
+        <div class="clearfix"></div>
+        
+        <!-- Menu -->
+        <div class="menuBar">
+            <div class="menuBar-inner">
+           
+        <div class="cssmenu">
+        <%--<ul id="menu">
+       
+        <li class="menu_right"><a href="ContactUs.aspx">Contact Us</a></li>
+        
+          <li class="menu_right"><a href="Privacypolicy.aspx">Privacy</a>	</li>
+           <li class="menu_right"><a href="AboutUs.aspx">About Us</a></li>
+ 
+       
+   <!-- End 3 columns Item -->
+    <li class="menu_right"><a href="Default.aspx">Home</a></li>
+   
+</ul>--%>
+<ul id="menu">
+            
+                    <li class="menu_right">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                      </li>
+                      <li class="menu_right">
+                      <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/moderators/Default.aspx">Main Menu</asp:HyperLink>
+                      </li>
+                      <li class="menu_right">
+                       <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                      </li>
+                
+        </ul>
+
+       
+        </div>
+             </div>
+        </div>
+    
+    </div>
+    
+      </div>
+      
+    <div class="welcome_bg">
+  <div class="container">
+ 
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="clearfix mar_top4"></div>
+    </div> 
+    </div> 
+    <div class="footer_copyright">
+
+  <div class="container">
+    <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" ShowStartingNode="False" />
+    <div class="one_full"> <b>Copyright © 2015 <a href="http://www.amincode.com/">amincode.com</a> All rights reserved.</b>
+         <asp:Menu runat="server" ID="FooterMenu" DataSourceID="SiteMapDataSource" StaticDisplayLevels="1"
+                MaximumDynamicDisplayLevels="0" Orientation="Horizontal">           </asp:Menu> 
+                
+    
+   
+  </div>
+   <div class="clearfix mar_top1"></div>
+</div>
+    </div> 
+    </div> 
+    </div>
+    </form>
+</body>
+</html>

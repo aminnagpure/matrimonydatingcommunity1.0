@@ -1,0 +1,149 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPagenoads.master.vb" Inherits="MasterPagenoads" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title></title>
+    <link rel="shortcut icon" href="images/fevilove.ico">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+    <div class="wrapper_boxed">
+
+<div class="site_wrapper">
+<div id="trueHeader">
+    <div class="wrapper">
+      <div class="container"> 
+      
+        <!-- Logo -->
+        <div class="one_half"><a href="Default.aspx"  id="logo">
+        
+        </a></div>
+        <div class="one_half topLogin ">
+        <span style="float:right;"> Welcome,
+                    <asp:LoginName ID="MemberName" runat="server" />
+                   
+                    <asp:LoginStatus ID="MemberLoginStatus" OnLoggingOut="LoginStatus1_LoggingOut" runat="server" /></span>
+        </div>
+         </div>
+        <div class="clearfix"></div>
+        
+        <!-- Menu -->
+        <div class="menuBar">
+            <div class="menuBar-inner">
+           
+        <div class="cssmenu">
+        <%--<ul id="menu">
+       
+        <li class="menu_right"><a href="ContactUs.aspx">Contact Us</a></li>
+        
+          <li class="menu_right"><a href="Privacypolicy.aspx">Privacy</a>	</li>
+           <li class="menu_right"><a href="AboutUs.aspx">About Us</a></li>
+ 
+       
+   <!-- End 3 columns Item -->
+    <li class="menu_right"><a href="Default.aspx">Home</a></li>
+   
+</ul>--%>
+<ul id="menu">
+            <asp:Repeater ID="TopMenuRepeater" DataSourceID="SiteMapDataSource" runat="server">
+                <ItemTemplate>
+                    <li class="menu_right">
+                       <asp:HyperLink runat="server" ID="MenuLink" NavigateUrl='<%# Eval("Url") %>'><span><%# Eval("Title") %></span></asp:HyperLink></li>
+                </ItemTemplate>
+            </asp:Repeater>
+        </ul>
+ <div class="menu_left">
+
+            <asp:LoginView ID="LoginView" runat="server">
+                <AnonymousTemplate>
+                    <%--<asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/members/Default.aspx">Login</asp:HyperLink>--%>
+                    
+                    <asp:HyperLink ID="RegisterLink" runat="server" NavigateUrl="~/PlusSignIn.aspx">Register</asp:HyperLink>
+                </AnonymousTemplate>
+                <%--<LoggedInTemplate>
+                    Welcome,
+                    <asp:LoginName ID="MemberName" runat="server" />
+                   
+                    <asp:LoginStatus ID="MemberLoginStatus" OnLoggingOut="LoginStatus1_LoggingOut" runat="server" />
+                </LoggedInTemplate>--%>
+            </asp:LoginView>
+           <a href="browsemembers.aspx">Browse All Members</a> 
+        </div>
+       
+        </div>
+             </div>
+        </div>
+    
+    </div>
+    
+      </div>
+      
+    <div class="welcome_bg">
+  <div class="container">
+ 
+    <div>
+    <table>
+        <tr>
+        <td id="topad"  align="center">
+        <center>
+    <div runat="server" id="div2">
+        <img src="http://placehold.it/720X90/333/fff/&text=Ads 720X90" />
+       
+</div>
+    </center>
+        </td>
+        </tr>
+        <tr>
+        <td id="main"> 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+        </td>
+        
+        </tr>
+        <tr>
+            <td  id="bottomad"  align="center">
+           <center>
+    <div runat="server" id="div1">
+        <img src="http://placehold.it/720X90/333/fff/&text=Ads 720X90" />
+        
+</div>
+    </center>
+            </td>
+        </tr>
+
+    </table>
+       
+    </div>
+    <div class="clearfix mar_top4"></div>
+    </div> 
+    </div> 
+    <div class="footer_copyright">
+
+  <div class="container">
+    <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" ShowStartingNode="False" />
+    <div class="one_full"> <b>Copyright © 2015 <a href="http://www.amincode.com/">amincode.com</a> All rights reserved.</b>
+         <asp:Menu runat="server" ID="FooterMenu" DataSourceID="SiteMapDataSource" StaticDisplayLevels="1"
+                MaximumDynamicDisplayLevels="0" Orientation="Horizontal">           </asp:Menu> 
+                
+    
+   
+  </div>
+   <div class="clearfix mar_top1"></div>
+</div>
+    </div> 
+    </div> 
+    </form>
+     <%  If Request.Cookies("scammer") IsNot Nothing Then
+         Response.Redirect("usedbyscammers.aspx")
+     End If
+    %>
+</body>
+</html>
